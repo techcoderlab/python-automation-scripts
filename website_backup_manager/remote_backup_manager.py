@@ -105,13 +105,14 @@ if __name__ == "__main__":
 
 
     # Website directory on server (name only)
-    website_dir_name = 'themes'
+    website_dir_name = 'website_dir_name_on_server'
 
     # Website database (name only)
     database_name = os.getenv('DB_NAME', 'test_db')
 
     # Local path where website backup will be downloaded
-    local_base_path = f"/Users/hassan/Sites/BACKUPS/REMOTE_SERVER/{website_dir_name}"
+    local_base_path = "/Users/your_user_name"
+    
 
 
     ssh_config = {
@@ -120,7 +121,7 @@ if __name__ == "__main__":
         'password': os.getenv('SSH_PASS', 'sshpassword'),
         'port': os.getenv('SSH_PORT', 22),
         'local_base_url': local_base_path,
-        'host_base_url': '/home/u775440477/domains/hassandev.com/public_html/wp-content'  
+        'host_base_url': 'path_on_server'  
     }
 
     ftp_config = {
@@ -128,7 +129,7 @@ if __name__ == "__main__":
         'username': os.getenv('FTP_USER', 'ftpuser'),
         'password': os.getenv('FTP_PASS', 'ftppassword'),
         'local_base_path': local_base_path,
-        'host_base_path': './wp-content/'
+        'host_base_path': 'path_on_server'
     }
 
     db_config = {
